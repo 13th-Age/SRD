@@ -1,9 +1,12 @@
 <section id="title">
 <div class="container mt-2">
-	<h1 class="display-1 text-center">{{ site.title }}</h1>
+	<h1 class="display-1 text-center">{{ page.title | default:site.title }}</h1>
 	<nav class="mt-3">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="/">13th Age</a></li>
+			{%- if page.title != null %}
+			<li class="breadcrumb-item"><a href="{{ '/' | relative_url }}">13th Age SRD</a></li>
+			{%- endif %}
 			<li class="breadcrumb-item active">{{ page.title | default: "13th Age SRD" }}</li>
 		</ol>
 	</nav>

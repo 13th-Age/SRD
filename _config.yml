@@ -1,6 +1,8 @@
 title: "13th Age SRD"
 titles_from_headings:
     enabled: false
+kramdown:
+    toc_levels: [1, 2, 3]
 defaults:
     -
         values:
